@@ -8,12 +8,15 @@ import { useNavigate } from 'react-router';
 const Articles = () => {
     const appContext = useContext(AppContext);
     const [articles,setArticles]= appContext.value1;
+    const [selectdArticle,setSelectdArticle] = appContext.value5;
     const navigate = useNavigate();
     
     const [count,setCount]= useState(0);
     const handleCount =()=>{
         setCount(count+1);
     }
+
+
 
 
 
@@ -34,7 +37,12 @@ const Articles = () => {
                                 <p>{article.publishedAt}</p>
                                 <div>
     
-                                <button className=" pointer read-more" onClick={()=>navigate(`${article.url}`)}>Read more</button>
+                                <button className=" pointer read-more"  
+                                onClick={()=>{
+                                   setSelectdArticle([article]);
+                                   navigate(`/articles/${idx}`)
+
+                                 }} >Read more</button>
                                 </div>
                                 </div>
                             </div>

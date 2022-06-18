@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 const Sports = () => {
     const appContext = useContext(AppContext);
     const [politics,setPolitics]= appContext.value3;
+    const [selectdArticle,setSelectdArticle] = appContext.value5;
     const navigate = useNavigate();
 
     const [count,setCount]= useState(0);
@@ -17,7 +18,7 @@ const Sports = () => {
              {politics.slice(0,`${count===0 ? 3 :count===1? 9 :count===2? 12:count===3? 15 :count===4 ?  politics.length:22 }`).map((article,idx)=>{
                  return(
                     <div className="article-box" key={idx}>
-                             <img src={article.urlToImage} alt="article-src" className="article-image" />
+                             <img src={article.urlToImage===null? `https://www.livanova.com/dist/public/images/content-images/default-news.jpg`:article.urlToImage} alt="article-src" className="article-image" />
                             <div className="article-text">
 
                             <h4>{article.title}</h4>
@@ -26,7 +27,11 @@ const Sports = () => {
                             <p>{article.publishedAt}</p>
                             <div>
 
-                            <button className=" pointer read-more" onClick={()=>navigate(`${article.url}`)}>Read more</button>
+                            <button className=" pointer read-more"  onClick={()=>{
+                                   setSelectdArticle([article]);
+                                   navigate(`/articles/${idx}`)
+
+                                 }} >Read more</button>
                             </div>
                             </div>
                         </div>
