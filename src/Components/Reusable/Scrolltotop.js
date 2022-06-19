@@ -1,9 +1,9 @@
 import React from 'react'
-import {MdArrowForwardIos} from "react-icons/md";
+import {BsArrowUp} from "react-icons/bs";
 const Scrolltotop = () => {
     return (
         <a href="#tophead" className="scroll-top" >
-            <MdArrowForwardIos className="right-arrow" />
+            <BsArrowUp className="right-arrow" />
         </a>
     )
 }

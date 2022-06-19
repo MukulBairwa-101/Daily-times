@@ -12,6 +12,7 @@ const Sports = () => {
         setCount(count+1);
     }
 
+
     return (
         <div className="content-container-md-60">
              <h2 className="heading" >Sports</h2>
@@ -28,10 +29,11 @@ const Sports = () => {
                             <div>
 
                             <button className=" pointer read-more"  
-                            onClick={()=>{
-                                        setSelectdArticle([article])
-                                        navigate(`/article/sports/${idx}`)
-                                 }}>Read more</button>
+                             onClick={()=>{
+                                setSelectdArticle([article]);
+                                navigate(`/articles/${idx}`)}}
+
+                           >Read more</button>
                             </div>
                             </div>
                         </div>

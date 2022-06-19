@@ -14,10 +14,10 @@ const Nav = () => {
 
     const [dropdownlistActive,setDropdownListActive] =useState(false);
     const handleAuthRoute =(path)=>{
-        if(path === 'login' || path === 'signup'){
-            setAuthRoute(path);
-        }
-        else setAuthRoute('');
+        // if(path === 'login' || path === 'signup'){
+        //     setAuthRoute(true);
+        // }
+        // else setAuthRoute(false);
 
         navigate(`/${path}`);
         // console.log('auuth route',authRoute);

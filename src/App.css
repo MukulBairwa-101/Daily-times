@@ -12,7 +12,8 @@
     --btn-violet-lt-alt:#b56de6;
     --signup-btn:teal;
     --dropdown-list:#F8F8F8;
-    --footer-bg:#181818;
+    /* --footer-bg:#181818; */
+    --footer-bg:#02203c;
 }
 
 html {
@@ -63,6 +64,11 @@ h5{
 p{
     font-size: 13px;
 }
+
+a{
+    text-decoration:none;
+    color:var(--btn-violet-lt-alt);
+}
 .content-container{
     margin:20px auto;
     max-width: 800px;
@@ -75,19 +81,25 @@ p{
     z-index:2;
     bottom:50px;
     right:10px;
-    background-color:var(--signup-btn);
-    color:#fff;
+    /* background-color:var(--signup-btn); */
+    color:var(--signup-btn); 
     border-radius:10px;
 
     
 
 }
 .right-arrow{
-    transform: rotate(-90deg);
     padding:5px;
     font-size:30px;
-    margin: 0 5px;
+    margin: 0 0px;
 
+}
+.eyeIcon{
+   position:absolute;
+    right:20px;
+    top:50px;
+    font-size: 18px;
+    color:gray;
 }
 
 

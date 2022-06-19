@@ -12,6 +12,7 @@ const Sports = () => {
         setCount(count+1);
     }
 
+    
     return (
         <div className="content-container-md-60">
              <h2 className="heading" >World and Political Thoughts</h2>

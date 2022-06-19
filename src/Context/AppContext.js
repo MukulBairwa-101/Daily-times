@@ -11,7 +11,7 @@ export const Provider = (props) => {
     const [articleSelected,setArticleSelected]= useState(false);
     const [selectdArticle,setSelectdArticle]= useState([]);
     const [load,setLoad]= useState(false);
-    const [authRoute,setAuthRoute]= useState('');
+    const [authRoute,setAuthRoute]= useState(false);
     const [signedUpUsers,setSignedUpUsers] = useState([]);
     const [ isLoggedin,setIsloggedin] = useState({name:'',active:false,profileImage:''});
     const [imageUpload,setImageUpload] = useState('');

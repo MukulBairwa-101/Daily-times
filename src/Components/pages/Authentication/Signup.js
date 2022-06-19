@@ -27,9 +27,12 @@ const Signup = () => {
 
     if(fieldId.type === 'password'){
       fieldId.type = 'text';
-      setTogglePassword(!togglePassword);
+      setTogglePassword(true);
     }
-    else fieldId.type = 'password'
+    else{ 
+      fieldId.type = 'password'
+      setTogglePassword(false);
+    }
     
 
 
@@ -164,7 +167,7 @@ const Signup = () => {
             id="password"
           />
           {
-            !togglePassword ? <BiShow onClick={()=>togglePasswordVisibility('password')} />: <BiHide onClick={()=>togglePasswordVisibility(('password'))} />
+            !togglePassword ? <BiShow onClick={()=>togglePasswordVisibility('password')} className="eyeIcon" />: <BiHide onClick={()=>togglePasswordVisibility(('password'))} className="eyeIcon" />
           }
           
         </div>
@@ -186,7 +189,7 @@ const Signup = () => {
             id="confirmpassword"
           />
           {
-            !togglePassword ? <BiShow  onClick={()=>togglePasswordVisibility('confirmpassword')} />: <BiHide  onClick={()=>togglePasswordVisibility('confirmpassword')} />
+            !togglePassword ? <BiShow  onClick={()=>togglePasswordVisibility('confirmpassword')} className="eyeIcon" />: <BiHide  onClick={()=>togglePasswordVisibility('confirmpassword')}  className="eyeIcon"/>
           }
           
         </div>
